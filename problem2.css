@@ -1,0 +1,16 @@
+
+    body{
+        background-color: slateblue;
+    }
+    .main{
+
+        padding-top:20%;
+        padding-left: 25%;
+       
+    }
+    .form-control{
+        width: 200%
+    }
+    button { border: none;
+        background:  transparent; }
+    

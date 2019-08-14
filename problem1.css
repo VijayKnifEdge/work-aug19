@@ -1,0 +1,25 @@
+.span3{
+    background-color:whitesmoke;
+    border-radius:10px;
+}
+
+.span12{
+    background-color:lightgrey;
+    border-radius:10px;
+}
+.hero-unit{
+    background-color:white;
+    border-radius:10px;
+}
+.navbar{
+    background-color:lightskyblue;
+}
+
+.span4{
+    background-color:whitesmoke;
+    border-radius:10px;
+    
+}
+body{
+    background-color:lightgray;
+}

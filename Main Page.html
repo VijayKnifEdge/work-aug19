@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///D:/JavaScript/webpack-starter/week4/mainpage.html?fname=dfb&lname=ergergre&mail=bghhf# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title> Main Page</title>
+        <link href="file:///D:/JavaScript/webpack-starter/week4/bootstrap.css" rel="stylesheet">
+        <link href="file:///D:/JavaScript/webpack-starter/week4/mainpage.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Main Page_files/font-awesome.min.css">
+        <script src="./Main Page_files/jquery-3.1.0.js.download"></script>
+        <script src="file:///D:/JavaScript/webpack-starter/week4/form.js"></script>
+
+        <script>
+                function btnclick(btnum){
+                    $("tbody").children().remove();
+                    $.ajax({
+                  url: "https://reqres.in/api/users?page="+btnum,
+                  data: {},
+                  beforeSend: function(){}
+              }).done(function(response) {
+                  var trArr = new Array();
+                  $.each(response.data, function(i, v){
+                      trArr.push('<tr><td>' + v.first_name  + '</td><td>' + v.email + '</td><td><img id="img" src="' 
+                      + v.avatar + '" width="100px" /></td><td> <i class="fa fa-edit" style="font-size:22px;color:blue"></i></span>  <span ><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span>' + '</td></tr>'  );
+                      
+                  });
+                  $('table#table tbody').append(trArr.join('\n'));
+              })};
+              </script>
+
+     </head>
+     <body class="body">
+        
+
+            
+         <form class="form">
+            <div>
+                   <b id="heading"> User List </b>                    
+                            <button type="button" class="btn btn-primary" id="btnn">+ Add  User</button> <br><br>
+                            
+                        </div>
+                            <div>
+                            <table id="table">
+                                <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                     
+                                      <th>Email address</th>
+                                      <th>Avatar</th>
+                                      <th>Action </th> 
+
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                    
+                                    
+
+
+
+
+
+
+
+<tr><td>George</td><td>george.bluth@reqres.in</td><td><img id="img" src="./Main Page_files/128.jpg" width="100px"></td><td> <i class="fa fa-edit" style="font-size:22px;color:blue"></i>  <span><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span></td></tr>
+<tr><td>Janet</td><td>janet.weaver@reqres.in</td><td><img id="img" src="./Main Page_files/128(1).jpg" width="100px"></td><td> <i class="fa fa-edit" style="font-size:22px;color:blue"></i>  <span><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span></td></tr>
+<tr><td>Emma</td><td>emma.wong@reqres.in</td><td><img id="img" src="./Main Page_files/128(2).jpg" width="100px"></td><td> <i class="fa fa-edit" style="font-size:22px;color:blue"></i>  <span><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span></td></tr></tbody>
+                                    </table>
+                                    </div>
+
+                            </form>
+                            <div class="pagination page">
+                                    <a href="file:///D:/JavaScript/webpack-starter/week4/mainpage.html?fname=dfb&amp;lname=ergergre&amp;mail=bghhf#">« </a>
+                                    <a href="file:///D:/JavaScript/webpack-starter/week4/mainpage.html?fname=dfb&amp;lname=ergergre&amp;mail=bghhf#" onclick="btnclick(1)"> 1 </a>
+                                    <a href="file:///D:/JavaScript/webpack-starter/week4/mainpage.html?fname=dfb&amp;lname=ergergre&amp;mail=bghhf#" onclick="btnclick(2)"> 2 </a>
+                                    <a href="file:///D:/JavaScript/webpack-starter/week4/mainpage.html?fname=dfb&amp;lname=ergergre&amp;mail=bghhf#" onclick="btnclick(3)"> 3 </a>
+                                    </div>
+
+                            <form class="form1" id="for">
+                    
+                      
+                                    <div class="texts">
+                                      <h3>User Details </h3>
+                                    <br>
+                                    <div>
+                                    <p>First Name:</p>
+                                    <input type="text" name="fname" class="input-xlarge" id="name" placeholder="John" required="">
+                                    <p>Last Name:</p>
+                                    <input type="text" name="lname" class="input-xlarge" id="lname" placeholder="Doe" required="">
+                                    <p>Email:</p>
+                                    <input required="" type="text" name="mail" class="input-xlarge" id="email" placeholder="you@domain.com">
+                                    
+                                     </div>
+                                        
+                                      <div id="buttn">
+                                        <button type="button" class="btn btn-success add-row" id="buttn for" value="Add Row">SUBMIT</button>
+                                      <br>
+                                    <br>
+                                        </div>
+                                        </div>
+                                    </form>
+                            
+                            <script src="file:///D:/JavaScript/webpack-starter/week4/form.js"></script>
+                            
+
+                           
+                            </body></html>

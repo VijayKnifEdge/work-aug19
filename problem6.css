@@ -1,0 +1,120 @@
+body{align-content: center;
+    background-color: whitesmoke;
+    width:100%;
+    height:100%;
+   
+}
+form{
+    
+    border-width: 4px 0px 0px 0px;
+    border-style: solid;
+    border-top-color: green;
+    width:1080px;
+   
+    background-color:white;
+    float:center;
+   border-radius: 10px;
+    text-align:center;
+    border:1;
+    
+    
+}
+
+
+#form{
+   
+ 
+    padding-bottom:90px;
+    padding-top:5px;
+    padding-right:100px;
+    padding-left:250px;
+   
+    
+}
+.below{
+   
+    padding:25px;
+   
+    margin-top: 10px;
+    margin-left:160px;
+    margin-right:160px;
+   
+    font-family:serif;
+  
+    }
+    .span3{
+       
+  border-width: 1px;
+  border-width: 4px 0px 0px 0px;
+  border-style: solid;
+  border-top-color: Blue;
+        text-align: center;
+        background-color:lightyellow;
+        border-radius:5px;
+        
+    }
+.roww{
+   
+padding:25px;
+width: 1030px;
+margin-top: 0px;
+height:250px;
+-webkit-text-fill-color: whitesmoke;
+font-family:serif;
+background-color: rgb(102, 96, 96);
+}
+.txt{
+    -webkit-text-fill-color: green;
+   font-family: sans-serif;
+    font-weight: 400;
+}
+.whitetext{
+    -webkit-text-fill-color: white;
+    font-weight: 700;
+    font-style: italic;
+     
+}
+.fonts{
+    -webkit-text-fill-color: black;
+    font-size: 22px;
+    font-weight: 500;
+   font-family: Arial, Helvetica, sans-serif;
+    
+}
+#inp {
+    border: 0;
+    border-radius:25px;
+   
+    border-bottom: 1px solid black;
+  }
+  .fa-paper-plane-o{
+      color:green;
+  }
+
+  .fa-puzzle-piece{
+    color:rgb(230, 11, 48);
+}
+#love{
+    color:red;
+}
+.fa-bar-chart{
+    color:blue;
+}
+#search{
+    color:black;
+}
+
+.one{
+    border-width: 1px;
+    border-width: 4px 0px 0px 0px;
+    border-style: solid;
+    border-top-color: green;
+}
+
+.two{
+    border-width: 1px;
+    border-width: 4px 0px 0px 0px;
+    border-style: solid;
+    border-top-color:rgb(230, 11, 48);
+}
+

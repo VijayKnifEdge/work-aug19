@@ -1,0 +1,19 @@
+body{
+    background-color: grey;
+    width:70%;
+   
+    height:70%;
+   
+}
+form{
+    background-color:white;
+    margin:250px;
+    margin-top:50px;
+    padding:50px;
+    font-style:arial; 
+    border-width: 4px 0px 0px 0px;
+    border-style: solid;
+    border-top-color: blue;
+    
+}
+
