@@ -11,6 +11,9 @@
 
     <script>
         function btnclick(btnum) {
+            if (btnum<=4 || btnum>=1)
+            pgcount=btnum;
+
             $("tbody").children().remove();
             $.ajax({
                 url: "https://reqres.in/api/users?page=" + btnum,
@@ -19,8 +22,8 @@
             }).done(function (response) {
                 var trArr = new Array();
                 $.each(response.data, function (i, v) {
-                    trArr.push('<tr><td>' + v.first_name + '</td><td>' + v.email + '</td><td><img id="img" src="'
-                        + v.avatar + '" width="100px" /></td><td> <i class="fa fa-edit" style="font-size:22px;color:blue"></i></span>  <span ><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span>' + '</td></tr>');
+                    trArr.push('<tr><td>' + v.first_name + ' '+ v.last_name + '</td><td>' + v.email + '</td><td><img id="img" src="'
+                        + v.avatar + '" width="100px" /></td><td> <a class="edit" id="ed"  </button> <i class="fa fa-edit" style="font-size:22px;color:blue"></i></span> <a class="delete" id="de"  </button> <span ><i class="fa fa-trash-o" style="font-size:22px;color:red"></i></span>' + '</td></tr>');
 
                 });
                 $('table#table tbody').append(trArr.join('\n'));
@@ -50,11 +53,11 @@
             <table id="table">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th id="row1">Name</th>
 
-                        <th>Email address</th>
-                        <th>Avatar</th>
-                        <th>Action </th>
+                        <th id="row2">Email address</th>
+                        <th id="row3">Avatar</th>
+                        <th id="row4">Action </th>
 
                     </tr>
                 </thead>
@@ -67,14 +70,14 @@
         </br>
         </br>
         <div class=" page ">
-
+          
             <!--   <a href="#" onclick="btnclick(1)" >&laquo; </a> -->
-            <a href="#" onclick="btnclick(2)"> PREV </a>
-            <a href="#" onclick="btnclick(1)"> 1 </a>
-            <a href="#" onclick="btnclick(2)"> 2 </a>
-            <a href="#" onclick="btnclick(3)"> 3 </a>
-            <a href="#" onclick="btnclick(4)"> NEXT </a>
-
+            <a href="#" onclick="btnclick(pgcount-1)" class="ele"> Prev </a>
+            <a href="#" onclick="btnclick(1)" class="ele"> 1 </a>
+            <a href="#" onclick="btnclick(2)" class="ele"> 2 </a>
+            <a href="#" onclick="btnclick(3)" class="ele"> 3 </a>
+            <a href="#" onclick="btnclick(pgcount+1)" class="ele"> Next </a>
+ 
         </div>
     </form>
 
@@ -95,6 +98,7 @@
             </div>
 
             <div id="buttn">
+                    <button type="button" class="btn btn-warning cancel" id="for cancel">CANCEL</button>
                 <button type="button" class="btn btn-success add-row" id="buttn for">SUBMIT</button>
                 </br>
                 </br>
